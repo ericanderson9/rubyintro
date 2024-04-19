@@ -10,6 +10,23 @@ diamonds = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 hearts = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 spades = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 
+# for card in clubs
+#     puts "#{card} of Clubs"
+# end
+
+# for card in diamonds
+#     puts "#{card} of Diamonds"
+# end
+
+# for card in hearts
+#     puts "#{card} of Hearts"
+# end
+
+# for card in spades 
+#     puts "#{card} of Spades"
+# end
+
+
 # Sample output:
 # 2 of Clubs
 # 3 of Clubs
@@ -26,6 +43,25 @@ spades = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
 
+# for suit in suits
+#     for rank in ranks
+#         puts "#{rank} of #{suit}"
+#     end
+# end
+
 # CHALLENGE #2
 # Deal a poker hand. Shuffle the deck and "deal" (i.e. display) a 5 card hand (i.e. 5 cards from the deck).
 # You will want to look at the documentation for Arrays: https://ruby-doc.org/core-2.7.0/Array.html
+
+
+
+index = 0
+loop do
+    random_card = rand(0..ranks.count - 1)
+    random_suit = rand(0..suits.count - 1)
+    if index == 5
+        break
+    end
+    puts "#{ranks[random_card]} of #{suits[random_suit]}"
+    index = index + 1
+end
